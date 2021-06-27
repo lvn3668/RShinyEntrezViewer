@@ -1,0 +1,2357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Haojia</First><Last>Wu</Last></Person>
+    <Email>haojiawu@wustl.edu</Email>
+    <Laboratory>Humphreys Lab</Laboratory>
+    <Department>Renal Division/Internal Medicine</Department>
+    <Organization>Washington University in St. Louis</Organization>
+    <Address>
+      <Line>600 S Euclid Ave</Line>
+      <City>St. Louis</City>
+      <State>Missouri</State>
+      <Postal-Code>MO 63110</Postal-Code>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Benjamin</First><Middle>D</Middle><Last>Humphreys</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL21493">
+    <Status database="GEO">
+      <Submission-Date>2016-02-22</Submission-Date>
+      <Release-Date>2016-02-22</Release-Date>
+      <Last-Update-Date>2019-02-11</Last-Update-Date>
+    </Status>
+    <Title>Illumina HiSeq 3000 (Mus musculus)</Title>
+    <Accession database="GEO">GPL21493</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="10090">Mus musculus</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM3561139">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.Total.1</Title>
+    <Accession database="GEO">GSM3561139</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737082" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245638" />
+  </Sample>
+
+  <Sample iid="GSM3561140">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.Total.2</Title>
+    <Accession database="GEO">GSM3561140</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737081" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245639" />
+  </Sample>
+
+  <Sample iid="GSM3561141">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.Total.3</Title>
+    <Accession database="GEO">GSM3561141</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737080" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245640" />
+  </Sample>
+
+  <Sample iid="GSM3561142">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.Total.4</Title>
+    <Accession database="GEO">GSM3561142</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737079" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245641" />
+  </Sample>
+
+  <Sample iid="GSM3561143">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.Total.1</Title>
+    <Accession database="GEO">GSM3561143</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737078" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245642" />
+  </Sample>
+
+  <Sample iid="GSM3561144">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.Total.2</Title>
+    <Accession database="GEO">GSM3561144</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737077" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245643" />
+  </Sample>
+
+  <Sample iid="GSM3561145">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.Total.3</Title>
+    <Accession database="GEO">GSM3561145</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737076" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245644" />
+  </Sample>
+
+  <Sample iid="GSM3561146">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.Total.4</Title>
+    <Accession database="GEO">GSM3561146</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737075" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245645" />
+  </Sample>
+
+  <Sample iid="GSM3561147">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.Total.1</Title>
+    <Accession database="GEO">GSM3561147</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737074" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245646" />
+  </Sample>
+
+  <Sample iid="GSM3561148">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.Total.2</Title>
+    <Accession database="GEO">GSM3561148</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737073" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245647" />
+  </Sample>
+
+  <Sample iid="GSM3561149">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.Total.3</Title>
+    <Accession database="GEO">GSM3561149</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737072" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245648" />
+  </Sample>
+
+  <Sample iid="GSM3561150">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.Total.4</Title>
+    <Accession database="GEO">GSM3561150</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737071" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245649" />
+  </Sample>
+
+  <Sample iid="GSM3561151">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.PT.1</Title>
+    <Accession database="GEO">GSM3561151</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737070" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245650" />
+  </Sample>
+
+  <Sample iid="GSM3561152">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.PT.2</Title>
+    <Accession database="GEO">GSM3561152</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737069" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245651" />
+  </Sample>
+
+  <Sample iid="GSM3561153">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.PT.3</Title>
+    <Accession database="GEO">GSM3561153</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737114" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245652" />
+  </Sample>
+
+  <Sample iid="GSM3561154">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.CLK.PT.4</Title>
+    <Accession database="GEO">GSM3561154</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737113" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245653" />
+  </Sample>
+
+  <Sample iid="GSM3561155">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.PT.1</Title>
+    <Accession database="GEO">GSM3561155</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737112" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245654" />
+  </Sample>
+
+  <Sample iid="GSM3561156">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.PT.2</Title>
+    <Accession database="GEO">GSM3561156</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737111" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245655" />
+  </Sample>
+
+  <Sample iid="GSM3561157">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.PT.3</Title>
+    <Accession database="GEO">GSM3561157</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737110" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245656" />
+  </Sample>
+
+  <Sample iid="GSM3561158">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D5UUO.PT.4</Title>
+    <Accession database="GEO">GSM3561158</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737109" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245657" />
+  </Sample>
+
+  <Sample iid="GSM3561159">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.PT.1</Title>
+    <Accession database="GEO">GSM3561159</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737108" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245658" />
+  </Sample>
+
+  <Sample iid="GSM3561160">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.PT.2</Title>
+    <Accession database="GEO">GSM3561160</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737107" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245659" />
+  </Sample>
+
+  <Sample iid="GSM3561161">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.PT.3</Title>
+    <Accession database="GEO">GSM3561161</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737106" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245660" />
+  </Sample>
+
+  <Sample iid="GSM3561162">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Male.D10UUO.PT.4</Title>
+    <Accession database="GEO">GSM3561162</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Male
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737105" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245661" />
+  </Sample>
+
+  <Sample iid="GSM3561163">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.Total.1</Title>
+    <Accession database="GEO">GSM3561163</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737104" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245662" />
+  </Sample>
+
+  <Sample iid="GSM3561164">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.Total.2</Title>
+    <Accession database="GEO">GSM3561164</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737103" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245663" />
+  </Sample>
+
+  <Sample iid="GSM3561165">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.Total.3</Title>
+    <Accession database="GEO">GSM3561165</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737102" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245664" />
+  </Sample>
+
+  <Sample iid="GSM3561166">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.Total.1</Title>
+    <Accession database="GEO">GSM3561166</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737101" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245665" />
+  </Sample>
+
+  <Sample iid="GSM3561167">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.Total.2</Title>
+    <Accession database="GEO">GSM3561167</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737100" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245666" />
+  </Sample>
+
+  <Sample iid="GSM3561168">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.Total.3</Title>
+    <Accession database="GEO">GSM3561168</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737099" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245667" />
+  </Sample>
+
+  <Sample iid="GSM3561169">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.Total.1</Title>
+    <Accession database="GEO">GSM3561169</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737097" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245668" />
+  </Sample>
+
+  <Sample iid="GSM3561170">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.Total.2</Title>
+    <Accession database="GEO">GSM3561170</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737096" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245669" />
+  </Sample>
+
+  <Sample iid="GSM3561171">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.Total.3</Title>
+    <Accession database="GEO">GSM3561171</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Total kidney</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Total kidney
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737095" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245670" />
+  </Sample>
+
+  <Sample iid="GSM3561172">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.PT.1</Title>
+    <Accession database="GEO">GSM3561172</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737093" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245671" />
+  </Sample>
+
+  <Sample iid="GSM3561173">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.PT.2</Title>
+    <Accession database="GEO">GSM3561173</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737092" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245672" />
+  </Sample>
+
+  <Sample iid="GSM3561174">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.CLK.PT.3</Title>
+    <Accession database="GEO">GSM3561174</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+contralateral kidney (healthy control)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737091" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245673" />
+  </Sample>
+
+  <Sample iid="GSM3561175">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.PT.1</Title>
+    <Accession database="GEO">GSM3561175</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737090" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245674" />
+  </Sample>
+
+  <Sample iid="GSM3561176">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.PT.2</Title>
+    <Accession database="GEO">GSM3561176</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737089" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245675" />
+  </Sample>
+
+  <Sample iid="GSM3561177">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D5UUO.PT.3</Title>
+    <Accession database="GEO">GSM3561177</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 5 after unilateral ureteral obstruction (UUO) surgery (moderate kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737088" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245676" />
+  </Sample>
+
+  <Sample iid="GSM3561178">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.PT.1</Title>
+    <Accession database="GEO">GSM3561178</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737086" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245677" />
+  </Sample>
+
+  <Sample iid="GSM3561179">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.PT.2</Title>
+    <Accession database="GEO">GSM3561179</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737085" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245678" />
+  </Sample>
+
+  <Sample iid="GSM3561180">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-09-21</Last-Update-Date>
+    </Status>
+    <Title>Female.D10UUO.PT.3</Title>
+    <Accession database="GEO">GSM3561180</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Proximal tubule</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="gender">
+Female
+      </Characteristics>
+      <Characteristics tag="age">
+Wk12
+      </Characteristics>
+      <Characteristics tag="disease state">
+day 10 after unilateral ureteral obstruction (UUO) surgery (severe kidney injury model)
+      </Characteristics>
+      <Characteristics tag="tissue">
+Proximal tubule
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+[TRAP-seq protocol]  Kidneys were removed and decapsulated after perfusion with iced-cold PBS. Renal cortex was rapidly dissected and minced on ice. Samples were then transferred to 1 ml of ice-cold extraction buffer for homogenization. Streptavidin Dyanbeads, which were freshly coated with monoclonal anti-GFP antibodies (clone 19C8 and clone 19F7) through biotinylated Protein L, were added to the kidney postmitochondrial supernatants and incubated at 4°C under end-over-end rotation for 4 hours for immunoprecipitation. After that, beads were collected on a magnetic rack, and the unbound fraction of samples were taken. Collected beads were then washed 4 times by high-salt washing buffer. Bound fractions of samples were then extracted by Qiagen RNeasy lysis buffer. All of the bound and unbound fractions of RNA were then purified by RNeasy MinElute Cleanup Kit  with in-column DNase digestion
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+TRAP-seq
+    </Description>
+    <Data-Processing>
+Sequencing reads were aligned to the Ensembl release 76 assembly with STAR version 2.0.4b. Gene counts were derived from the number of uniquely aligned unambiguous reads by Subread:featureCount version 1.4.5. Transcript counts were produced by Sailfish version 0.6.3. Sequencing performance was accessed for total number of aligned reads, total number of uniquely aligned reads, genes and transcripts detected, ribosomal fraction known junction saturation and read distribution over known gene models with RSeQC version 2.3.
+Genome_build: Ensembl release 76 assembly
+Supplementary_files_format_and_content: Raw counts, RPKMs.
+    </Data-Processing>
+    <Platform-Ref ref="GPL21493" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 3000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN10737084" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX5245679" />
+  </Sample>
+
+  <Series iid="GSE125015">
+    <Status database="GEO">
+      <Submission-Date>2019-01-13</Submission-Date>
+      <Release-Date>2019-09-21</Release-Date>
+      <Last-Update-Date>2019-12-21</Last-Update-Date>
+    </Status>
+    <Title>Translational profiling of proximal tubule in fibrotic kidney</Title>
+    <Accession database="GEO">GSE125015</Accession>
+    <Pubmed-ID>31537650</Pubmed-ID>
+    <Summary>
+Injury to the proximal tubule plays a central role in the initiation and progression of kidney fibrosis, and rates of chronic kidney disease progresses approximately 50% faster in males compared to females. We applied Translating Ribosome Affinity Purification (TRAP) followed by RNA-sequencing to characterize the cell-specific proximal tubule transcriptional landscape during fibrosis in male vs. female mice.
+    </Summary>
+    <Overall-Design>
+Promixal tubule was profiled by Translating Ribosome Affinity Purification (TRAP)
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM3561139" />
+    <Sample-Ref ref="GSM3561140" />
+    <Sample-Ref ref="GSM3561141" />
+    <Sample-Ref ref="GSM3561142" />
+    <Sample-Ref ref="GSM3561143" />
+    <Sample-Ref ref="GSM3561144" />
+    <Sample-Ref ref="GSM3561145" />
+    <Sample-Ref ref="GSM3561146" />
+    <Sample-Ref ref="GSM3561147" />
+    <Sample-Ref ref="GSM3561148" />
+    <Sample-Ref ref="GSM3561149" />
+    <Sample-Ref ref="GSM3561150" />
+    <Sample-Ref ref="GSM3561151" />
+    <Sample-Ref ref="GSM3561152" />
+    <Sample-Ref ref="GSM3561153" />
+    <Sample-Ref ref="GSM3561154" />
+    <Sample-Ref ref="GSM3561155" />
+    <Sample-Ref ref="GSM3561156" />
+    <Sample-Ref ref="GSM3561157" />
+    <Sample-Ref ref="GSM3561158" />
+    <Sample-Ref ref="GSM3561159" />
+    <Sample-Ref ref="GSM3561160" />
+    <Sample-Ref ref="GSM3561161" />
+    <Sample-Ref ref="GSM3561162" />
+    <Sample-Ref ref="GSM3561163" />
+    <Sample-Ref ref="GSM3561164" />
+    <Sample-Ref ref="GSM3561165" />
+    <Sample-Ref ref="GSM3561166" />
+    <Sample-Ref ref="GSM3561167" />
+    <Sample-Ref ref="GSM3561168" />
+    <Sample-Ref ref="GSM3561169" />
+    <Sample-Ref ref="GSM3561170" />
+    <Sample-Ref ref="GSM3561171" />
+    <Sample-Ref ref="GSM3561172" />
+    <Sample-Ref ref="GSM3561173" />
+    <Sample-Ref ref="GSM3561174" />
+    <Sample-Ref ref="GSM3561175" />
+    <Sample-Ref ref="GSM3561176" />
+    <Sample-Ref ref="GSM3561177" />
+    <Sample-Ref ref="GSM3561178" />
+    <Sample-Ref ref="GSM3561179" />
+    <Sample-Ref ref="GSM3561180" />
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125015/suppl/GSE125015_TRAP.UUO.RPKM.txt.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125015/suppl/GSE125015_TRAP.UUO.Raw.txt.gz
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA514912" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP178890" />
+  </Series>
+
+</MINiML>
