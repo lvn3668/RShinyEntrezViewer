@@ -23,20 +23,23 @@ library(rvest)
 library(hash)
 library(heatmaply)
 source("HsaggregateQueries.R")
+source("MusMusculusaggregateQueries.R")
 source("HsEntrezGeneQueries.R")
 source("MmEntrezGeneQueries.R")
 source("MongoDBConnection.R")
 source("HsaggregateQueries.R")
+source("NA12878phasingdataqueries.R")
 library(Hmisc)
 # Define UI for application that draws a histogram
-ui <- fluidPage(# Application title
-  titlePanel("Analysis of Entrez Gene data"),
+ui <- fluidPage(
+  # Application title
+  titlePanel("Entrez Data Visualizer (Hs and Mm)"),
   
   
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-      titlePanel("Data Visualization"),
+      titlePanel("Input parameters"),
       sidebarPanel(uiOutput("Choice of box plot")),
       
       selectInput(
@@ -46,13 +49,19 @@ ui <- fluidPage(# Application title
       ),
       
       uiOutput(outputId = 'chosenorganism'),
+      
       selectInput(
         inputId = "ChoiceOfBoxPlot",
         label = "Choose gene function, whose distribution is to be viewed across human chromosomes",
         choices = c(
-          "Protein coding genes",
-          "Lysosomal genes",
-          "Musculoskeletal genes"
+          "Protein coding genes (human)",
+          "Lysosomal genes (human)",
+          "Musculoskeletal genes (human)",
+          "Protein coding genes (mouse)",
+          "Lysosomal genes (mouse)",
+          "Musculoskeletal genes (mouse)",
+          "NA12878 phasing data distribution (phase1)",
+          "NA12878 phasing data distribution (phase2)"
         )
       ),
       
@@ -60,11 +69,12 @@ ui <- fluidPage(# Application title
       numericInput(
         inputId = "numberofrecordstodisplay",
         label = "Number of observations to view:",
-        value = 10,
-        min = 10
+        value = 62839,
+        min = 100
       ),
       
-      
+      #dataTableOutput("mousedataview"),
+      #dataTableOutput("humandataview"),
       #fileInput("files", "Choose File", multiple = TRUE),
       #checkboxInput("center", "Center", TRUE),
       #selectInput("cv", "cross-validation",
@@ -91,10 +101,11 @@ ui <- fluidPage(# Application title
       h3(textOutput("caption", container = span)),
       plotOutput("boxPlot"),
       verbatimTextOutput("summary"),
-      tableOutput("humandataview"),
-      tableOutput("mousedataview")
+      dataTableOutput("humandataview"),
+      dataTableOutput("mousedataview")
     )
-  ))
+  )
+)
 
 
 # Define server logic required to draw a histogram
@@ -110,8 +121,21 @@ ui <- fluidPage(# Application title
 #' @examples
 server <- function(input, output, session) {
   values <- reactiveValues()
+  
+  
+  getStatus <- reactive({
+    if (input$organism == 'human') {
+      values$result <- 'human'
+    } else if (input$choice == 'mouse') {
+      values$result <- 'mouse'
+    }
+  })
+  
+  
+  
   output$chosenorganism <- renderUI({
     if (input$organism == 'human') {
+      values$organism <- 'human'
       selectInput(
         inputId = c("humanqueries"),
         label = 'Choice of datasets for visualization',
@@ -128,6 +152,7 @@ server <- function(input, output, session) {
         )
       )
     } else if (input$organism == 'mouse') {
+      values$organism <- 'mouse'
       selectInput(
         inputId = c("mousequeries"),
         label = 'Choice of datasets for visualization',
@@ -152,10 +177,16 @@ server <- function(input, output, session) {
   boxpolottobedisplayed <- reactive({
     switch (
       input$ChoiceOfBoxPlot,
-      "Protein coding genes" = findNumberOfProteinCodingGenesPerChromosome(homosapiensmongodbconnection),
-      "Lysosomal genes" =    findNumberOflysosomalGenesPerChromosome(homosapiensmongodbconnection),
-      "Musculoskeletal genes" = findNumberOfskeletalmuscleGenesPerChromosome(homosapiensmongodbconnection)
+      "Protein coding genes (human)" = findNumberOfProteinCodingGenesPerChromosome(homosapiensmongodbconnection),
+      "Lysosomal genes (human)" =    findNumberOflysosomalGenesPerChromosome(homosapiensmongodbconnection),
+      "Musculoskeletal genes (human)" = findNumberOfskeletalmuscleGenesPerChromosome(homosapiensmongodbconnection),
+      "Protein coding genes (mouse)" = findNumberOfProteinCodingGenesPerChromosomeMouse(musmusculusentrezgenedbconnection),
+      "Lysosomal genes (mouse)" =    findNumberOflysosomalGenesPerChromosomeMouse(musmusculusentrezgenedbconnection),
+      "Musculoskeletal genes (mouse)" = findNumberOfskeletalmuscleGenesPerChromosomeMouse(musmusculusentrezgenedbconnection),
+      "NA12878 phasing data distribution (phase1)" = getdistributionofphasedsequencelengthphase1(musmusculusphasingdatadbconnection),
+      "NA12878 phasing data distribution (phase2)" = getdistributionofphasedsequencelengthphase2(musmusculusphasingdatadbconnection)
     )
+    
   })
   
   
@@ -174,11 +205,11 @@ server <- function(input, output, session) {
   })
   
   # Count of protein coding genes by chromosome
-  hsproteincodingclass.df <-
+  proteincodingboxplotdata <-
     findNumberOfProteinCodingGenesPerChromosome(homosapiensmongodbconnection)
-  hslysosomalclass.df <-
+  lysosomalgenesboxplotdata <-
     findNumberOflysosomalGenesPerChromosome(homosapiensmongodbconnection)
-  hsskeletalmusclecodingclass.df <-
+  skeletalmuscleboxplotdata <-
     findNumberOfskeletalmuscleGenesPerChromosome(homosapiensmongodbconnection)
   
   # NA12878phasingdatatsvformat=read.csv(
@@ -190,7 +221,7 @@ server <- function(input, output, session) {
   #     fill=TRUE)
   # musmusculusdbconnection$insert(NA12878phasingdatatsvformat)
   
-  
+  updateNA12878phasingrecords(musmusculusphasingdatadbconnection)
   
   humandatasetToBeDisplayed <- reactive({
     switch(
@@ -222,6 +253,8 @@ server <- function(input, output, session) {
       "Gene, Description and Feature type" = extractdescriptionfeaturetype(entrezMmallrecords(musmusculusentrezgenedbconnection))
     )
     
+    
+    
   })
   
   
@@ -242,17 +275,11 @@ server <- function(input, output, session) {
   
   # total genes per chromosome for mouse entrez gene data
   #mmtotalgenesperchromosome <- musmusculusdbconnection$aggregate('[{"$group":{"_id":"$mmchromosome", "count": {"$sum":1}}}]')
-  
   #print("after printing total genes per chromosome")
+  
   # x <- hsproteincodingclass.df
   # print(names(x))
-  # ggplot(aes(chromosomenumber, numberofproteincodinggenesperchromosome),
-  #        data = hsproteincodingclass.df) + geom_col()
-  # plotdata <-
-  #   reactive({
-  #     ((hsproteincodingclass.df[, c("Chromosomenumber",
-  #                      "Numberofproteincodinggenesperchromosome")]))
-  #   })
+  
   
   
   # output$hist <- renderPlot({
@@ -277,48 +304,37 @@ server <- function(input, output, session) {
   
   
   # Show the first "n" observations ----
-  output$humandataview <- renderTable({
+  output$humandataview <- renderDataTable({
     head(humandatasetToBeDisplayed(),
          n = input$numberofrecordstodisplay)
-  },
-  striped = FALSE,
-  bordered = TRUE,
-  spacing = "m",
-  width = "100%",
-  align = 'c',
-  rownames = TRUE,
-  colnames = TRUE, caption = "Human Data")
+  })
+  
+  #striped = FALSE,
+  #bordered = TRUE,
+  #spacing = "m",
+  #width = "100%",
+  #align = 'c',
+  #rownames = TRUE,
+  #colnames = TRUE, caption = "Human Data")
   
   # Show the first "n" observations ----
-  output$mousedataview <- renderTable({
+  output$mousedataview <- renderDataTable({
     head(mousedatasetToBeDisplayed(),
          n = input$numberofrecordstodisplay)
-  },
-  striped = FALSE,
-  bordered = TRUE,
-  spacing = "m",
-  width = "100%",
-  align = 'c',
-  rownames = TRUE,
-  colnames = TRUE,
-  caption = "Mouse Data")
+  })
+  
+  #striped = FALSE,
+  #bordered = TRUE,
+  #spacing = "m",
+  #width = "100%",
+  #align = 'c',
+  #rownames = TRUE,
+  #colnames = TRUE,
+  #caption = "Mouse Data")
   
   output$boxPlot <- renderPlot({
     boxplotdata <- boxpolottobedisplayed()
-    #print(boxplotdata)
-    boxplot(
-      boxplotdata$Numberofgenesperchromosome ~ boxplotdata$Chromosomenumber,
-      data = boxplotdata,
-      xlab = "Number of chromosomes",
-      ylab = "Number of genes per chromosome",
-      border = "green",
-      notch = TRUE,
-      varwidth = TRUE,
-      main = "Box plot distribution
-            of number of chosen genes per chromosome",
-      col.bg = "yellow",
-      col.grid = "black"
-    )
+    
   })
   
   output$caption <- renderText({

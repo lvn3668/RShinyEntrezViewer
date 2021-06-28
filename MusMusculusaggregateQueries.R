@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-findNumberOfProteinCodingGenesPerChromosome <- function(musmusculusentrezgenedbconnection) {
+findNumberOfProteinCodingGenesPerChromosomeMouse <- function(musmusculusentrezgenedbconnection) {
   # chr1 genes which are protein coding for which we display chromsome, type of genes.
   # symbol, synonyms, dbxrefs and modification date greater than ???
   # chr1 genes which are protein coding for which we display chromsome, type of genes.
@@ -164,7 +164,7 @@ findNumberOfProteinCodingGenesPerChromosome <- function(musmusculusentrezgenedbc
   msproteincodingclass.df <-
     data.frame(
       "Chromosomenumber" = 1:23,
-      "Numberofproteincodinggenesperchromosome" =
+      "Numberofgenesperchromosome" =
         c(
           nrow(chr1mmgenes),
           nrow(chr2mmgenes),
@@ -191,7 +191,20 @@ findNumberOfProteinCodingGenesPerChromosome <- function(musmusculusentrezgenedbc
           nrow(chr22mmgenes)
         )
     )
-  return(msproteincodingclass.df)
+  boxplotdata <- boxplot(
+    msproteincodingclass.df$Numberofgenesperchromosome ~ msproteincodingclass.df$Chromosomenumber,
+    data = msproteincodingclass.df,
+    xlab = "Number of chromosomes",
+    ylab = "Number of genes per chromosome",
+    border = "green",
+    notch = TRUE,
+    varwidth = TRUE,
+    main = "Box plot distribution
+              of number of chosen genes per chromosome (mouse)",
+    col.bg = "yellow",
+    col.grid = "black"
+  )
+  return(boxplotdata)
 }
 
 
@@ -204,7 +217,7 @@ findNumberOfProteinCodingGenesPerChromosome <- function(musmusculusentrezgenedbc
 #' @export
 #'
 #' @examples
-findNumberOflysosomalGenesPerChromosome <- function(musmusculusentrezgenedbconnection) {
+findNumberOflysosomalGenesPerChromosomeMouse <- function(musmusculusentrezgenedbconnection) {
 
   chr1mmgenes <- musmusculusentrezgenedbconnection$find(
     query = '{"chromosome" : "1", "type_of_gene" : "lysosomal"}',
@@ -358,7 +371,7 @@ findNumberOflysosomalGenesPerChromosome <- function(musmusculusentrezgenedbconne
   mslysosomalclass.df <-
     data.frame(
       "Chromosomenumber" = 1:23,
-      "Numberoflysosomalgenesperchromosome" =
+      "Numberofgenesperchromosome" =
         c(
           nrow(chr1mmgenes),
           nrow(chr2mmgenes),
@@ -385,7 +398,21 @@ findNumberOflysosomalGenesPerChromosome <- function(musmusculusentrezgenedbconne
           nrow(chr22mmgenes)
         )
     )
-  return(mslysosomalclass.df)
+  
+  boxplotdata <- boxplot(
+    mslysosomalclass.df$Numberofgenesperchromosome ~ mslysosomalclass.df$Chromosomenumber,
+    data = mslysosomalclass.df,
+    xlab = "Number of chromosomes",
+    ylab = "Number of genes per chromosome",
+    border = "green",
+    notch = TRUE,
+    varwidth = TRUE,
+    main = "Box plot distribution
+              of number of chosen genes per chromosome (mouse)",
+    col.bg = "yellow",
+    col.grid = "black"
+  )
+  return(boxplotdata)
 }
 
 
@@ -397,7 +424,7 @@ findNumberOflysosomalGenesPerChromosome <- function(musmusculusentrezgenedbconne
 #' @export
 #'
 #' @examples
-findNumberOfskeletalmuscleGenesPerChromosome <- function(musmusculusentrezgenedbconnection) {
+findNumberOfskeletalmuscleGenesPerChromosomeMouse <- function(musmusculusentrezgenedbconnection) {
   
   chr1mmgenes <- musmusculusentrezgenedbconnection$find(
     query = '{"chromosome" : "1", "type_of_gene" : "skeletalmuscle"}',
@@ -551,7 +578,7 @@ findNumberOfskeletalmuscleGenesPerChromosome <- function(musmusculusentrezgenedb
   msskeletalmusclecodingclass.df <-
     data.frame(
       "Chromosomenumber" = 1:23,
-      "Numberofskeletalmusclegenesperchromosome" =
+      "Numberofgenesperchromosome" =
         c(
           nrow(chr1mmgenes),
           nrow(chr2mmgenes),
@@ -578,7 +605,20 @@ findNumberOfskeletalmuscleGenesPerChromosome <- function(musmusculusentrezgenedb
           nrow(chr22mmgenes)
         )
     )
-  return(msskeletalmusclecodingclass.df)
+  boxplotdata <- boxplot(
+    msskeletalmusclecodingclass.df$Numberofgenesperchromosome ~ msskeletalmusclecodingclass.df$Chromosomenumber,
+    data = msskeletalmusclecodingclass.df,
+    xlab = "Number of chromosomes",
+    ylab = "Number of genes per chromosome",
+    border = "green",
+    notch = TRUE,
+    varwidth = TRUE,
+    main = "Box plot distribution
+              of number of chosen genes per chromosome (mouse)",
+    col.bg = "yellow",
+    col.grid = "black"
+  )
+  return(boxplotdata)
 }
 
 # Other protein types for which counts can be obtained

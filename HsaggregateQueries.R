@@ -1,4 +1,18 @@
-
+library(shiny)
+library(ggplot2)
+library(dplyr)
+library(maps)
+library(ggmap)
+library(mongolite)
+library(lubridate)
+library(gridExtra)
+library("XML")
+library("methods")
+library(xml2)
+library(tidyverse)
+library(rvest)
+library(hash)
+library(heatmaply)
 #' Title
 #'
 #' @param homosapiensmongodbconnection 
@@ -192,7 +206,23 @@ findNumberOfProteinCodingGenesPerChromosome <- function(homosapiensmongodbconnec
           nrow(chr22hsgenes)
         )
     )
-  return(hsproteincodingclass.df)
+  
+    boxplotdata <- boxplot(
+        hsproteincodingclass.df$Numberofgenesperchromosome ~ hsproteincodingclass.df$Chromosomenumber,
+        data = hsproteincodingclass.df,
+        xlab = "Number of chromosomes",
+        ylab = "Number of genes per chromosome",
+        border = "green",
+        notch = TRUE,
+        varwidth = TRUE,
+        main = "Box plot distribution
+              of number of chosen genes per chromosome (human)",
+        col.bg = "yellow",
+        col.grid = "black"
+      )
+  
+  #return(hsproteincodingclass.df)
+    return(boxplotdata)
 }
 
 
@@ -386,7 +416,23 @@ findNumberOflysosomalGenesPerChromosome <- function(homosapiensmongodbconnection
           nrow(chr22hsgenes)
         )
     )
-  return(hslysosomalclass.df)
+  
+  boxplotdata <- boxplot(
+    hslysosomalclass.df$Numberofgenesperchromosome ~ hslysosomalclass.df$Chromosomenumber,
+    data = hslysosomalclass.df,
+    xlab = "Number of chromosomes",
+    ylab = "Number of genes per chromosome",
+    border = "green",
+    notch = TRUE,
+    varwidth = TRUE,
+    main = "Box plot distribution
+              of number of chosen genes per chromosome (human)",
+    col.bg = "yellow",
+    col.grid = "black"
+  )
+    return(boxplotdata)
+  
+  #return(hslysosomalclass.df)
 }
 
 
@@ -579,7 +625,21 @@ findNumberOfskeletalmuscleGenesPerChromosome <- function(homosapiensmongodbconne
           nrow(chr22hsgenes)
         )
     )
-  return(hsskeletalmusclecodingclass.df)
+  
+  boxplotdata <- boxplot(
+    hsskeletalmusclecodingclass.df$Numberofgenesperchromosome ~ hsskeletalmusclecodingclass.df$Chromosomenumber,
+    data = hsskeletalmusclecodingclass.df,
+    xlab = "Number of chromosomes",
+    ylab = "Number of genes per chromosome",
+    border = "green",
+    notch = TRUE,
+    varwidth = TRUE,
+    main = "Box plot distribution
+              of number of chosen genes per chromosome (human)",
+    col.bg = "yellow",
+    col.grid = "black"
+  )
+  return (boxplotdata)
 }
 
 #non-receptortyrosinekinase
