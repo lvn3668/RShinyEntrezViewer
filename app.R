@@ -30,8 +30,10 @@ source("MongoDBConnection.R")
 source("HsaggregateQueries.R")
 source("NA12878phasingdataqueries.R")
 library(Hmisc)
+library(shinythemes)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
+  theme = shinytheme("cerulean"),
   # Application title
   titlePanel("Entrez Data Visualizer (Hs and Mm)"),
   
@@ -48,7 +50,7 @@ ui <- fluidPage(
         choices = c('human', 'mouse'),
       ),
       
-      uiOutput(outputId = 'chosenorganism'),
+      uiOutput('chosenorganism'),
       
       selectInput(
         inputId = "ChoiceOfBoxPlot",
@@ -66,6 +68,7 @@ ui <- fluidPage(
       ),
       
       uiOutput("secondSelection"),
+      
       numericInput(
         inputId = "numberofrecordstodisplay",
         label = "Number of observations to view:",
@@ -82,8 +85,6 @@ ui <- fluidPage(
       #                     "none", Q2 =  "q2")),
       #checkboxInput("outliers", "Show outliers", TRUE)
       
-      uiOutput("PCs"),
-      
       # selectInput(
       #   "scaling",
       #   "Scale",
@@ -93,6 +94,9 @@ ui <- fluidPage(
       #     pareto = "pareto"
       #   )
       # ),
+      
+      uiOutput("PCs"),
+
       
     ),
     
@@ -123,6 +127,10 @@ server <- function(input, output, session) {
   values <- reactiveValues()
   
   
+  homosapiensmongodbconnection = dbconnectionhs()
+  musmusculusphasingdatadbconnection = dbconnectionphasing()
+  musmusculusentrezgenedbconnection = dbconnectionmm()
+  
   getStatus <- reactive({
     if (input$organism == 'human') {
       values$result <- 'human'
@@ -131,7 +139,45 @@ server <- function(input, output, session) {
     }
   })
   
+  # get count of number of records in human and mouse entrez datasets 
+  humanentrezgenerecords = HsEntrezGeneQueries(entrezhsallrecords(homosapiensmongodbconnection))
+  mouseentrezgenerecords = MmEntrezGeneQueries(entrezMmallrecords(musmusculusentrezgenedbconnection))
   
+  output$numrecords <- 
+    
+    renderUI({
+      if(input$organism == 'human') {
+      numericInput(
+      inputId = "humannumberofrecordstodisplay",
+      label = "Number of observations to view:",
+      value = humanentrezgenerecords,
+      min = 100
+    )
+        }
+    
+   else if (input$organism == 'mouse') {
+    numericInput(
+      inputId = "mousenumberofrecordstodisplay",
+      label = "Number of observations to view:",
+      value = mousentrezgenerecords,
+      min = 100
+    )}
+  })
+ 
+  
+  
+  observeEvent(input$controller, {
+    # We'll use the input$controller variable multiple times, so save it as x
+    # for convenience.
+    controller <- input$controller
+    
+    updateNumericInput(session, "numberofrecordstodisplay", value = controller)
+    
+    #updateNumericInput(session, "inNumber2",
+    #                   label = paste("Number label ", x),
+    #                   value = x, min = x-10, max = x+10, step = 5)
+  })
+
   
   output$chosenorganism <- renderUI({
     if (input$organism == 'human') {
@@ -170,9 +216,6 @@ server <- function(input, output, session) {
     }
   })
   
-  homosapiensmongodbconnection = dbconnectionhs()
-  musmusculusphasingdatadbconnection = dbconnectionphasing()
-  musmusculusentrezgenedbconnection = dbconnectionmm()
   
   boxpolottobedisplayed <- reactive({
     switch (
@@ -192,10 +235,8 @@ server <- function(input, output, session) {
   
   
   data <- eventReactive(input$displayrecords, {
-    print("Inside handler for button")
     # get the data from
     dataset <- datasetToBeDisplayed()
-    print(dataset)
     df <- data.frame()
     df
   })
@@ -242,6 +283,7 @@ server <- function(input, output, session) {
   mousedatasetToBeDisplayed <- reactive({
     switch(
       input$mousequeries,
+      
       #Choice for the mouse aggregate queries
       "Count of all genes for species mus musculus in Entrez" = MmEntrezGeneQueries(entrezMmallrecords(musmusculusentrezgenedbconnection)),
       "All distinct genes for species mus musculus in Entrez" = entrezMmdistinctgeneids(entrezMmallrecords(musmusculusentrezgenedbconnection)),
@@ -269,7 +311,6 @@ server <- function(input, output, session) {
   #   }
   # )
   
-  
   # add a column to find location on chromosome and find average coordinates of that...
   # for now, modification date is place holder for average field
   
@@ -279,8 +320,6 @@ server <- function(input, output, session) {
   
   # x <- hsproteincodingclass.df
   # print(names(x))
-  
-  
   
   # output$hist <- renderPlot({
   #   # d1<-(plotData())
@@ -307,30 +346,18 @@ server <- function(input, output, session) {
   output$humandataview <- renderDataTable({
     head(humandatasetToBeDisplayed(),
          n = input$numberofrecordstodisplay)
+        
   })
   
-  #striped = FALSE,
-  #bordered = TRUE,
-  #spacing = "m",
-  #width = "100%",
-  #align = 'c',
-  #rownames = TRUE,
-  #colnames = TRUE, caption = "Human Data")
   
   # Show the first "n" observations ----
   output$mousedataview <- renderDataTable({
     head(mousedatasetToBeDisplayed(),
          n = input$numberofrecordstodisplay)
+    
   })
   
-  #striped = FALSE,
-  #bordered = TRUE,
-  #spacing = "m",
-  #width = "100%",
-  #align = 'c',
-  #rownames = TRUE,
-  #colnames = TRUE,
-  #caption = "Mouse Data")
+
   
   output$boxPlot <- renderPlot({
     boxplotdata <- boxpolottobedisplayed()
